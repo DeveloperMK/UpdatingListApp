@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/ic_icon"
+        android:title="---"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item2"
+        android:title="Motivation (Quotes)!"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item3"
+        android:title="To-Do List!"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:title="Share quote"
+        app:showAsAction="ifRoom" />
+
+</menu>
