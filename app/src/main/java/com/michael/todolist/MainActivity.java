@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
         switch (item.getItemId()) {
 
             case R.id.item1:
-                Toast.makeText(this, "Please tap on the three dots (Menu)!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please tap on: 'More options'! (-->)", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.item2:
@@ -100,6 +100,9 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
                 Intent go2 = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(go2);
                 return true;
+
+            case R.id.nav_share:
+                Toast.makeText(this, "Coming soon!", Toast.LENGTH_SHORT).show();
 
             default:
                 return super.onOptionsItemSelected(item);

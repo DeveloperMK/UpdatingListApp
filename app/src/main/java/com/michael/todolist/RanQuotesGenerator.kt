@@ -1,4 +1,4 @@
-package com.michael.todolist;
+package com.michael.todolist
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_ranquotesgenerator.*
@@ -34,7 +35,6 @@ class RanQuotesGenerator : AppCompatActivity() {
     var quoteNumber = 0
     var mainText = ""
 
-   // val fab_newQuote:View = findViewById(R.id.fab_newQuote)
    lateinit var fab_newQuote: FloatingActionButton
    lateinit var tv_text: TextView
 
@@ -44,14 +44,13 @@ class RanQuotesGenerator : AppCompatActivity() {
         fab_newQuote= findViewById<FloatingActionButton>(R.id.fab_newQuote)
         tv_text= findViewById<TextView>(R.id.tv_text)
         quoteOnAppLoaded()
-      //  clickNewQuote()
+        clickNewQuote()
     }
 
     private fun clickNewQuote() {
-        //fab_newQuote:View = findViewById(R.id.fab_newQuote)
-
         fab_newQuote.setOnClickListener {
-           // fab_newQuote.isEnabled = false
+            fab_newQuote.isEnabled = false
+
             if (quoteNumber == listQuotes.size) {
                 quoteOnAppLoaded()
             } else {
@@ -62,7 +61,7 @@ class RanQuotesGenerator : AppCompatActivity() {
     }
 
     private fun quoteOnAppLoaded() {
-       // fab_newQuote.isEnabled = false
+        fab_newQuote.isEnabled = false
         quoteNumber = 0
         listQuotes.shuffle()
         typeText(getString(listQuotes[quoteNumber]))
@@ -108,7 +107,23 @@ class RanQuotesGenerator : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         return when (item.itemId) {
-            R.id.nav_share -> {
+
+            R.id.item1 -> { Toast.makeText(this, "Please tap on: 'More options'! (-->)", Toast.LENGTH_LONG).show()
+                return true }
+
+            R.id.item2 -> { Toast.makeText(this, "Motivational quotes; you're here!", Toast.LENGTH_LONG).show()
+                val go1 = Intent(this@RanQuotesGenerator, RanQuotesGenerator::class.java)
+                startActivity(go1)
+                return true }
+
+            R.id.item3 -> { Toast.makeText(this, "To-Do List!", Toast.LENGTH_LONG).show()
+                val go2 = Intent(this@RanQuotesGenerator, MainActivity::class.java)
+                startActivity(go2)
+                return true }
+
+            // לפרסם...
+
+                R.id.nav_share -> {
                 val shareIntent = Intent()
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.type = "text/plain"
@@ -117,6 +132,7 @@ class RanQuotesGenerator : AppCompatActivity() {
 
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
