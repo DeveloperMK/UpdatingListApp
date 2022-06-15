@@ -4,12 +4,33 @@
     <string name="new_task">New Task</string>
     <string name="tasks">Tasks</string>
 
-    <string name="quote1">quote1</string>
-    <string name="quote2">quote2</string>
-    <string name="quote3">quote3</string>
-    <string name="quote4">quote4</string>
-    <string name="quote5">quote5</string>
-    <string name="quote6">quote6</string>
-    <string name="quote7">quote7</string>
+    <string name="quote1">
+“Start where you are. Use what you have. Do what you can.”
+\n\n— Arthur Ashe
+    </string>
+    <string name="quote2">
+“Procrastination is the thief of time.”
+\n\n– Edward Young
+    </string>
+    <string name="quote3">
+“Time is what we want most, but what we use worst.”
+\n\n— William Penn
+    </string>
+    <string name="quote4">
+“A man who dares to waste one hour of life has not discovered the value of life.”
+\n\n— Charles Darwin
+    </string>
+    <string name="quote5">
+“A year from now you will wish you had started today.”
+\n\n— Karen Lamb
+    </string>
+    <string name="quote6">
+“Set peace of mind as your highest goal, and organize your life around it.”
+\n\n— Brian Tracy
+    </string>
+    <string name="quote7">
+“Doing something that is productive is a great way to alleviate emotional stress. Get your mind doing something that is productive.”
+\n\n— Ziggy Marley
+    </string>
 
 </resources>
