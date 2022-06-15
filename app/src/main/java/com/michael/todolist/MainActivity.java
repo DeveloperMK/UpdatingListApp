@@ -1,5 +1,6 @@
 package com.michael.todolist;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -99,6 +100,30 @@ public class MainActivity extends AppCompatActivity implements DialogCloseListen
                 Toast.makeText(this, "To-Do List; you're here!", Toast.LENGTH_SHORT).show();
                 Intent go2 = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(go2);
+                return true;
+
+            case R.id.exit1:
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("Are you sure you want to close this application?");
+                builder.setCancelable(true);
+
+                builder.setNegativeButton("PROCEED", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int a) {
+                        finish();
+                    }
+                });
+
+                builder.setPositiveButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int a) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
                 return true;
 
             case R.id.nav_share:

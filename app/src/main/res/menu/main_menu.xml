@@ -3,26 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_share"
-        android:icon="@drawable/ic_baseline_share_24"
-        android:title="Share the quote"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/activitiesMenu"
+        android:title="Activities"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item
+                android:id="@+id/item3"
+                android:title="To-Do List"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/item2"
+                android:title="Motivation (Quotes)"
+                app:showAsAction="never">
+
+<!--                <menu>-->
+
+<!--                    <item-->
+<!--                        android:id="@+id/nav_share"-->
+<!--                        android:icon="@drawable/ic_baseline_share_24"-->
+<!--                        android:title="Share the quote"-->
+<!--                        app:showAsAction="never" />-->
+
+<!--                </menu>-->
+
+            </item>
+
+        </menu>
+        </item>
+
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="Share the quote"
+            app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/exit1"
+        android:title="Exit (Close Application)"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_baseline_exit_to_app_24" />
+
 
     <item
         android:id="@+id/item1"
         android:icon="@drawable/ic_icon"
         android:title="Searching: 'More options' (-->)"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/item3"
-        android:title="To-Do List"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/item2"
-        android:title="Motivation (Quotes)"
-        app:showAsAction="never" />
-
+        app:showAsAction="always" />
 
 </menu>
