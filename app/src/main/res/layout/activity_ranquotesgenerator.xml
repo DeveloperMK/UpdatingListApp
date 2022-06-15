@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".RanQuotesGenerator">
 
+    <TextView
+        android:id="@+id/motivQuotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Motivational Quotes"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_text"

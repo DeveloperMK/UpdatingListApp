@@ -35,12 +35,15 @@ class RanQuotesGenerator : AppCompatActivity() {
     var quoteNumber = 0
     var mainText = ""
 
+    lateinit var motivQuotes : TextView
+
    lateinit var fab_newQuote: FloatingActionButton
    lateinit var tv_text: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ranquotesgenerator)
+        motivQuotes= findViewById<TextView>(R.id.motivQuotes)
         fab_newQuote= findViewById<FloatingActionButton>(R.id.fab_newQuote)
         tv_text= findViewById<TextView>(R.id.tv_text)
         quoteOnAppLoaded()
